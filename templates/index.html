@@ -1,0 +1,52 @@
+<DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>My Portfolio</title>
+    <style>
+      #hero {
+        max-width: 360 ;
+        height: auto
+            } 
+    </style>
+     
+  </head>
+  <body>
+    <div class="container">
+    <h1 class='text-center mt-3 mb-4'>
+      {{name}} 
+    </h1> 
+    <img class='img-fluid' id='hero' src = 'https://webdev-2.himanigulati1.repl.co/static/image2.jpeg'>
+    
+    Hey there, here goes information about me that I want you to know. 
+
+    <h2 class='text-center mt-2 mt-4'> About me </h2>
+    <p class='lead'>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras tincidunt. Euismod quis viverra nibh cras pulvinar mattis. Vitae elementum curabitur vitae nunc sed velit. Laoreet id donec ultrices tincidunt. Adipiscing commodo elit at imperdiet dui accumsan sit amet nulla. Aliquet porttitor lacus luctus accumsan. Ullamcorper a lacus vestibulum sed. Sed egestas egestas fringilla phasellus faucibus scelerisque eleifend donec. Tempor orci dapibus ultrices in iaculis nunc sed augue.
+    </p>
+
+    <h2 class='text-center mt-2 mb-4 '>
+      Interests and Hobbies
+    </h2>
+    <p>TODO</p>
+    <h2 class='text-center mt-2 mb-4 '>
+      Projects
+    </h2>
+      <div>
+        {% for pro in projects %}
+        {% include 'projectinfo.html' %}
+        {% endfor %}
+      </div> 
+
+
+      <div class='text-center mt-2  mb-4'>
+      <button class="btn btn-outline-secondary"> Get in Touch  </button>
+        
+      </div> 
+      
+    </div>
+  </body>
+</html>
